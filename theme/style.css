@@ -1,0 +1,17 @@
+body {
+  color: lavender;
+  background: black;
+}
+img {
+  width: 20%;
+}
+h1 {
+  font-family:sans-serif;
+}
+.examplelink a {
+  color: red;
+}
+#subheader {
+color: mintcream;
+font-style: italic;
+}
