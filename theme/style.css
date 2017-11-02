@@ -15,3 +15,31 @@ h1 {
 color: mintcream;
 font-style: italic;
 }
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+#navbar li {
+  list-style-type: none;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: gray;
+}
+
+#navbar li:nth-child(2n) a {
+  // applies to every other list item of every list
+  color:yellow:
+}
+
+#navbar li:nth-child(2n) {
+  color: yellow;
+  background: white;
+}
