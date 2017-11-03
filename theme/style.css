@@ -1,10 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
 body {
   color: lavender;
   background: black;
+  font-family: 'Open Sans', sans-serif;
 }
 img {
   width: 20%;
 }
+
+.header {
+  margin-top: 100px;
+}
+
+.header>.container h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+a:hover {
+  color: blue;
+}
+
 h1 {
   font-family:sans-serif;
 }
@@ -21,25 +42,109 @@ font-style: italic;
     margin: 0 auto;
 }
 
+#readme.container {
+  text-align:center;
+}
+
 html {
     box-sizing: border-box;
 }
 
-#navbar li {
+
+
+.sm>li {
   list-style-type: none;
 }
 
-#navbar a {
-  text-decoration: none;
-  color: gray;
-}
-
-#navbar li:nth-child(2n) a {
-  // applies to every other list item of every list
-  color:yellow:
-}
-
-#navbar li:nth-child(2n) {
-  color: yellow;
+/* navbar li */
+/*--------------------------------------------------------------------------*/
+.navbar {
+  width: 100vw;
+  text-align: center;
+  position:fixed;
   background: white;
+  top: 0;
+  right: 0;
+}
+
+.navbar>ul>li {
+  display: inline;
+  list-style-type: none;
+  margin: 5px;
+  position:relative;
+}
+
+.navbar .dropdown {
+  display:none;
+  position:absolute;
+  top:20px;
+  right:0;
+  background: white;
+  padding:10px;
+  list-style-type:none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  clear: both;
+  padding:10px;
+}
+
+.navbar a:hover + .dropdown, .dropdown:hover {
+  display:block;
+}
+
+
+.navbar>li {
+  background: #F5F0E4;
+  font-size: larger;
+}
+
+.navbar li:nth-child(2n) a {
+
+}
+
+.navbar li:nth-child(2n) {
+  background: #9D9FA7;
+}
+
+.navbar li:hover{
+  background: gray;
+}
+
+/* Countdown */
+/*-----------------------------------------------------------------------*/
+#countdown {
+  background-color: white;
+  padding: 10px;
+}
+
+#countdown>li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+#countdown>li:first-child {
+  background: red;
+}
+
+#countdown>li:nth-child(2) {
+  background: orange;
+}
+
+#countdown>li:nth-child(2n+1) {
+  background: indigo;
+}
+
+#countdown>li:nth-child(2n) {
+  background: blue;
+}
+
+#countdown>li:last-child {
+  background: violet;
+}
+
+#countdown>li:hover {
+  background: black;
 }
