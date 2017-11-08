@@ -1,0 +1,27 @@
+#grid {
+  display: grid;
+}
+
+#grid > div {
+  background-color: #D1D1DA;
+  padding: 1em;
+  margin: 0.25em;
+  border-radius: .5em;
+}
+
+#grid > div:first-child {
+
+grid-column-start: 1;
+grid-column-end: -1;
+/*each line or "gutter" is counted in grid-column-___ the negative value is taken as the last gutter*/
+}
+
+@media (min-width: 415px) {
+  #grid > div {
+    background-color: #A2A1B6;
+  }
+
+  #grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

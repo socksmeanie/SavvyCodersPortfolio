@@ -1,8 +1,9 @@
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 
 body {
   color: lavender;
-  background: black;
+  background: darkslategray;
   font-family: 'Open Sans', sans-serif;
 }
 img {
@@ -12,6 +13,28 @@ img {
 .header {
   margin-top: 100px;
 }
+
+.formheader {
+  margin-top: 120px;
+  background: lavender;
+  color: gray;
+  padding: 10px;
+  bottom: 0;
+}
+
+.flex {
+  display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+margin: 0;
+}
+
+input[type="text"] {
+  /*margin: 20px;*/
+  background: white;
+}
+
 
 .header>.container h1 {
   text-align: center;
@@ -106,7 +129,8 @@ html {
 }
 
 .navbar li:nth-child(2n) {
-  background: #9D9FA7;
+  background: lavender;
+  color: gray;
 }
 
 .navbar li:hover{
