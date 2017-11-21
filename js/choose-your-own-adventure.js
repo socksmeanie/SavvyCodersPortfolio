@@ -29,12 +29,21 @@ var story = {
 var runStory = function runStory( branch ){
     var chapter = story[branch];
     var choices = chapter.choices;
+    var isValidChoice = false;
     var choice;
 
     if( choices ){
-        choice = prompt( chapter.text );
+        if( choice == choices[1]){
+          isValidChoice = true;
+        }
 
-        if( choice === choices[0] || choice === choices[1] ){
+
+        for(var i = 0; i < choices.length; i++) {
+          isValidChoice = choice == choices[i];
+        }
+
+
+        if( isValidChoice ){
             runStory( choice );
         }
         else{
