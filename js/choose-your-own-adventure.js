@@ -1,15 +1,15 @@
 var story = {
     "start": {
         "text": "The year is 1973. You're a hard-boiled PI with a wise-cracking partner, Burt. One day, you remember you haven't had a client in days. Or, actually, ever. Maybe you could go out and look for trouble? Then again, maybe Burt's got something to say.",
-        "choices": [ "Go out", "Speak to Burt" ]
+        "choices": [ "Go out", "Speak to Burt", "Give up" ]
     },
     "Speak to Burt": {
         "text": "You face your partner. 'Hey Burt, ol' buddy,' you say. 'We need customers.' Burt looks up at you with his basset hound eyes. 'Bow wow.' He states. You laugh at your partner's wit, then consider what to do.",
-        "choices": [ "Pet Burt", "Make a Phone Call" ]
+        "choices": [ "Pet Burt", "Make a Phone Call", "Give up" ]
     },
     "Go out": {
         "text": "You try jiggling the handle, but can't seem to get out! Burt whines. You look around the room. There's a mop, and Burt. Hmm.",
-        "choices": [ "Use the Mop", "Burt" ]
+        "choices": [ "Use the Mop", "Burt", "Give up" ]
     },
     "Pet Burt": {
         "text": "You scratch him behind the ears. 'Woof.' Burt says, as he wags his tail. You chuckle. Is nothing sacred to your wiseacre partner? Oh! Also you die."
@@ -22,6 +22,9 @@ var story = {
     },
     "Burt": {
         "text": "You pick up your partner and rub his dog face (nobody ever said Burt was a looker) on the door until it's opened. By some teenager. 'Mr. D'Marco?' She nervously stammers. 'Why is there a lunatic and a dog in the mop closet?' 'Say what?' You ask. Eventually you strike up a deal with the JC Penny: you're allowed to stay in the closet (the stench you left made it unusable, anyway), and in return, you prowl the store at night, to scare away intruders with your unsettling..ness. You agree, then promptly die of starvation because you haven't eaten for the entire time you've been in there."
+    },
+    "Give Up": {
+        "text": "You collapse into a heap. The End."
     }
 };
 
@@ -33,13 +36,13 @@ var runStory = function runStory( branch ){
     var choice;
 
     if( choices ){
-        if( choice == choices[1]){
-          isValidChoice = true;
+        if( choice == choices[1] ){
+            isValidChoice = true;
         }
 
 
-        for(var i = 0; i < choices.length; i++) {
-          isValidChoice = choice == choices[i];
+        for( var i = 0; i < choices.length; i++ ){
+            isValidChoice = choice == choices[i];
         }
 
 
