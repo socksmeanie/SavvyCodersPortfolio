@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+
 var story = {
     "start": {
         "text": "The year is 1973. You're a hard-boiled PI with a wise-cracking partner, Burt. One day, you remember you haven't had a client in days. Or, actually, ever. Maybe you could go out and look for trouble? Then again, maybe Burt's got something to say.",
@@ -25,39 +27,45 @@ var story = {
     },
     "Give Up": {
         "text": "You collapse into a heap. The End."
+
     }
 };
 
 
-var runStory = function runStory( branch ){
-    var chapter = story[branch];
-    var choices = chapter.choices;
+function validateChoice( choice, choices ){
     var isValidChoice = false;
-    var choice;
 
-    if( choices ){
-        if( choice == choices[1] ){
+    for( let i = 0; i < choices.length; i++ ){
+        if( choice === choices[i] ){
             isValidChoice = true;
         }
+    }
 
+    return isValidChoice;
+}
 
-        for( var i = 0; i < choices.length; i++ ){
-            isValidChoice = choice == choices[i];
-        }
+function handleChoices( chapter, branch ){
+    var choice = prompt( chapter.text );
 
+    if( validateChoice( choice, chapter.choices ) ){
+        runStory( choice );
+    }
+    else{
+        runStory( branch );
+    }
+}
 
-        if( isValidChoice ){
-            runStory( choice );
-        }
-        else{
-            runStory( branch );
-        }
+function runStory( branch ){
+    var chapter = story[branch];
+
+    if( chapter.choices ){
+        handleChoices( chapter, branch );
     }
     else{
         document
             .querySelector( "#output" )
             .textContent = chapter.text;
     }
-};
+}
 
 runStory( "start" );

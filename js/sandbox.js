@@ -1,6 +1,7 @@
 /* globals $ */
 var $output = $( "#output" );
 var $subtitle = $( "<p>hi - world</p>" );
+var $changeme = $( "#changeme" );
 
 $output
     .html( "<h3>Hello Again, World!</h3>" )
@@ -21,3 +22,7 @@ $output
             $subtitle.css( { "color": "black" } );
         }
     } );
+
+$changeme
+    .append( $changeme )
+    .html( "<h1>jquery changeme!</h1>" );

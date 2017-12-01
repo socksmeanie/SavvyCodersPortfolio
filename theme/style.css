@@ -172,3 +172,7 @@ html {
 #countdown>li:hover {
   background: black;
 }
+
+#input {
+  width: 100%;
+}
