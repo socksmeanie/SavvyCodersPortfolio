@@ -1,6 +1,7 @@
 /* eslint-disable complexity */
 var fizzBuzzResult = "";
 var listItems = document.querySelectorAll( "li" );
+var listArray = Array.from( listitems );
 
 
 var generateEvenListItems = function generateEvenListItems( ){
@@ -23,6 +24,35 @@ generateEvenListItems();
 for( var i = 0; i < listItems.length; i++ ){
     listItems[i].textContent = i + 1;
 }
+
+var fizzBuzz2 = function fizzBuzz( num ){
+    var range = [];
+
+    for( let i = 1; i <= num; i++ ){
+        range.push( i );
+    }
+
+    var fizzBuzz = range.map( ( x ) => x % 15 === 0 );
+    var buzz = range.map( ( x ) => x % 5 === 0 && x % 15 != 0 );
+    var fizz = range.map( ( x ) => x % 3 === 0 && x % 15 != 0 );
+
+    fizzBuzzResult = fizzBuzz + "are FizzBuzz! " + fizz + " are Fizz! " + buzz + " are Buzz!";
+};
+
+var fizzBuzz2 = function fizzBuzz( num ){
+    var range = [];
+
+    for( let i = 1; i <= num; i++ ){
+        range.push( i );
+    }
+
+    var fizzBuzz = range.map( ( x ) => x % 15 === 0 );
+    var buzz = range.map( ( x ) => x % 5 === 0 && x % 15 != 0 );
+    var fizz = range.map( ( x ) => x % 3 === 0 && x % 15 != 0 );
+
+    fizzBuzzResult = fizzBuzz + "are FizzBuzz! " + fizz + " are Fizz! " + buzz + " are Buzz!";
+};
+
 
 var FizzBuzz = function FizzBuzz( num ){
     for( let i = 1; i <= num; i++ ){
