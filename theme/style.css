@@ -176,3 +176,11 @@ html {
 #input {
   width: 100%;
 }
+
+//
+
+.blockCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

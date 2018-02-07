@@ -1,4 +1,5 @@
 /* eslint-disable no-use-before-define */
+/* eslint-env jquery*/
 
 var story = {
     "start": {
@@ -31,16 +32,29 @@ var story = {
     }
 };
 
-function handleChoices( chapter, branch ){
-    var choice = prompt( chapter.text );
 
-    if( chapter.choices.some( ( validChoice ) => choice == validChoice ) ){
-        runStory( choice );
-    }
-    else{
-        runStory( branch );
-    }
+function handleChoices( chapter, branch ){
+    $( "#output" ).text( chapter.text );
+    $( "#selections" ).text( chapter.choices );
+    /* How can you respond to user input? On should only happen once...Think of
+    deconstructing handleChoices function*/
+
+    $( "#input" ).sumbit(
+        "keyup",
+        ( event ) => {
+            var option =  $( event.target ).val();
+
+            if( chapter.choices.some( ( validChoice ) => choice === validChoice ) ){
+                runStory( choice ); // choice is undefined due to the change of the prompt
+            }
+            else{
+                runStory( branch );
+            }
+        }
+
+    );
 }
+
 
 function runStory( branch ){
     var chapter = story[branch];
@@ -52,6 +66,9 @@ function runStory( branch ){
         document
             .querySelector( "#output" )
             .textContent = chapter.text;
+        document
+            .querySelector( "#selections" )
+            .textContent = chapter.choices;
     }
 }
 
