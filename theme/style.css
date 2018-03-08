@@ -177,10 +177,27 @@ html {
   width: 100%;
 }
 
-//
+/*CYOA*/
 
 .blockCenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.choice {
+      display: inline-block;
+      background: lavender;
+      color: darkslategray;
+      font-size: 1em;
+      border: 1px solid black;
+      padding: 10px;
+      height: 60px;
+      text-align: center;
+      cursor: pointer;
+      width: 30vw;
+      margin: 1vw;
+      border-radius: 15vw;
+      font-weight: bold;
+
 }
