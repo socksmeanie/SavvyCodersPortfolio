@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="/theme/style.css">
 </head>
 <body>
+  <div class="placeholder"></div>
+
   <div class="navbar">
       <ul>
               <li><a href="../">Home</a></li>
@@ -54,5 +56,12 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 <script type="text/javascript" src="../js/greeting.js"></script>
+
+<script>
+$.get("nav.html", function(data){
+    $(".placeholder").replaceWith(data);
+});
+</script>
+
 </body>
 </html>

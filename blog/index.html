@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/Theme/style.css">
 </head>
 <body>
+  <div class="placeholder"></div>
   <div class="header">
     <div class="container">
         <h1>Zoey's WonderBlog</h1>
@@ -32,7 +33,7 @@
         </ul>
     </div>
 
-    
+
   <div id="content" class="container">
   </div>
 
@@ -43,5 +44,11 @@
 </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <script src="/js/blog.js"></script>
+
+  <script>
+  $.get("../nav.html", function(data){
+      $(".placeholder").replaceWith(data);
+  });
+  </script>
 
 </body>

@@ -105,6 +105,7 @@ html {
   background: white;
   padding:10px;
   list-style-type:none;
+  z-index: 1;
 }
 
 .navbar a {
@@ -112,12 +113,13 @@ html {
   color: black;
   clear: both;
   padding:10px;
+  display: block;
+
 }
 
-.navbar a:hover + .dropdown, .dropdown:hover {
+/*.navbar a:hover + .dropdown, .dropdown:hover {
   display:block;
-}
-
+}*/
 
 .navbar>li {
   background: #F5F0E4;
@@ -136,6 +138,32 @@ html {
 .navbar li:hover{
   background: gray;
 }
+
+.navbarImport {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+}
+
+li.dropparent:hover .dropdown {
+    display: block;
+}
+
+
+.navbar .dropdown {
+    display: none;
+    position: absolute;
+    /*top: 7px;*/
+    right: 0;
+    background: white;
+    /* padding: 10px; */
+    list-style-type: none;
+    z-index: 1;
+    width: 20%;
+    padding: 0px;
+  }
+
+
 
 /* Countdown */
 /*-----------------------------------------------------------------------*/
