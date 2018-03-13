@@ -1,4 +1,4 @@
-# Danielle's Greatest Haiku
+# Zoey's Greatest Haiku
 
 ![alt chomp](https://i.imgur.com/stHVbDL.jpg)
 
