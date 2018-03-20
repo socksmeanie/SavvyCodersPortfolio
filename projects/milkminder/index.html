@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../theme/css.css">
+</head>
+<body>
+    <title>The Zoey Website Experience</title>
+    <link rel="stylesheet" href="/theme/style.css">
+  </head>
+  <body>
+          <div class="placeholder"></div>
+
+
+    <div class="container" id="readme"><div style="padding-top:50px;"></div>
+
+       <form id="eggForm" action="javascript:alert( 'success!' );">
+         <div>
+           <label for="eggsFridge">how many eggs do you have in the fridge</label><br>
+           <input id="eggsFridge" type="text"><br><br>
+           <label for="milkFridge">how many gallons of milk do you have in the fridge</label><br>
+           <input id="milkFridge" type="text"><br><br>
+
+           <label for="eggs">how many eggs do you eat daily</label><br>
+           <input id="eggs" type="text"><br><br>
+           <label for="milk">how many glasses of milk do you drink daily</label><br>
+           <input id="milk" type="text"><br><br><br>
+           <input type="submit">
+         </div>
+       </form>
+
+    </div>
+
+<img src="../../media/Achewoodcomic.gif" style="width: 493px;">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script type="text/javascript" src="../../js/greeting.js"></script>
+  <script type="text/javascript" src="../../js/milkeggminder.js"></script>
+
+  <script>
+  $.get("../../nav.html", function(data){
+      $(".placeholder").replaceWith(data);
+  });
+  </script>
+</body>
+</html>

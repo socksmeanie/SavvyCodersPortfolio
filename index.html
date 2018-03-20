@@ -21,9 +21,61 @@
           <li>Information</li>
           <li>Extra</li>
         </ul>
-    <div class="container">
-        <img class="train" src="https://upload.wikimedia.org/wikipedia/commons/8/86/BNSF_5350_20040808_Prairie_du_Chien_WI.jpg" />
-    </div>
 
+    <title>The Zoey Website Experience</title>
+    <link rel="stylesheet" href="/theme/style.css">
+  </head>
+  <body>
+    <div class="placeholder"></div>
+
+
+    <div class="container" id="readme">
+    <h1 class=header>Hi! I'm Zoey Snyder.</h1>
+    <h2 id="subheader">I am extremely wonderful.</h2>
+    <h3 id="node"></h3>
+    <img src="https://i.imgur.com/3h8KQ6o.jpg" alt="gaze upon my majesty">
+ <button type="button" id="minderbtn">Minder</button>
+  <ul class="sm">
+    <li><h4>Social Media</h4></li>
+    <li class="examplelink"><a href="https://github.com/socksmeanie">Github</a></li>
+    <li>That's it!</li>
+  </ul>
+
+  <ul id="countdown"><h3>Social Media</h3>
+      <li><img src="media/github.png"><a href="https://github.com/socksmeanie">Github</a></li>
+      <li><img src="media/LinkedIN.png"><a href="https://www.linkedin.com/in/zoey-snyder-9309a8154">LinkedIN</a></li>
+      <li><a href="http://www.socksmeanie.com">My Website!</a></li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+  </ul><input id="input" type="text" id="input" placeholder="what's your name? where do you live? what's your blood type? do you like cows or goats....milk?">
+  <br>
+  <ul><li>d</li></ul>
+  <img src="https://i.imgur.com/TZ89VHb.gif" alt="">
+    <h2 class="examplelink"><a href="/example.html">Example!</a></h2>
+    <a href="mailto:socksmeanie@gmail.com?Subject=Contact%20Form">Get at me!</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script type="text/javascript" src="js/greeting.js"></script>
+  <script type="text/javascript" src="js/milkeggminder.js"></script>
+
+  <script>
+  $.get("nav.html", function(data){
+      $(".placeholder").replaceWith(data);
+  });
+
+  function inputCallback( event ){
+      console.log( event.key );
+      if( event.which === 13 ){
+          alert( "you hit ENTER!" );
+      }
+      console.log( event.keyCode );
+  }
+
+$( "input" ).on( "keypress", inputCallback );
+
+  </script>
 </body>
 </html>

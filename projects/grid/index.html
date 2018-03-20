@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/theme/style.css">
 </head>
 <body>
+  <div id="placeholder"></div>
   <div id="grid">
    <div></div>
    <div></div>
@@ -19,5 +20,13 @@
    <div></div>
    <div></div>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="js/greeting.js"></script>
+  <script>
+  $.get("nav.html", function(data){
+      $(".placeholder").replaceWith(data);
+  });
+  </script>
 </body>
 </html>

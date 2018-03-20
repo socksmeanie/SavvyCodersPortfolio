@@ -2,6 +2,7 @@
 var $output = $( "#output" );
 var $subtitle = $( "<p>hi - world</p>" );
 var $changeme = $( "#changeme" );
+var $title = $( ".header" );
 
 $output
     .html( "<h3>Hello Again, World!</h3>" )

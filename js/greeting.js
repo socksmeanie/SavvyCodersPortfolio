@@ -1,5 +1,16 @@
 /* globals $ */
 /* eslint-disable no-use-before-define */
+var $img = $( "img" );
+
+
+function inputCallback( event ){
+    console.log( event.key );
+    if( event.which === 13 ){
+        alert( "you hit ENTER!" );
+    }
+    console.log( event.keyCode );
+}
+
 
 $( "#input" ).on(
     "keyup",
@@ -22,3 +33,10 @@ $( ".examplelink" ).on( "mouseenter", ( event ) => {
 $( ".examplelink" ).on( "mouseleave", ( event )  => {
     $( event.target ).css( "background-color", "transparent" );
 } );
+
+
+$( "img" )
+    .on( "click", () => {
+        alert( "title!" );
+        $( "h2" ).text( "Click worked!" );
+    } );
