@@ -6,10 +6,12 @@ var $content = $( "#content" );
 postsRequest.then(
     ( posts ) => posts
         .map(
-            ( post ) => "<p>" + post.title + "</p>"
+            ( post ) => "<h2>" + post.title + "</h2>" + "<p>" + post.body + "</p>"
+            /* ( post ) => "<p>" + post.body + "</p>"*/
         )
         .forEach(
             ( title ) => $content.append( title )
+            /* ( body ) => $content.append( body )*/
         )
 )
     .catch(

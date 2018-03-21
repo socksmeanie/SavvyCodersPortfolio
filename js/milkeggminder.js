@@ -27,9 +27,15 @@ $( "#eggForm" ).submit( function( event ){
     var milkFridge = $( "input#milkFridge" ).val();
 
 
-    alert( "You need to get a new gallon of milk in " + milkFridge * 16 / milk + " days" );
-    alert( "You need to get a new carton of eggs in " + eggsFridge / eggs + " days" );
+    $( "#milkOutput" ).text( "You need to get a new gallon of milk in " + milkFridge * 16 / milk + " days" + "<br>" +
+
+       "You need to get a new carton of eggs in " + eggsFridge / eggs + " days" );
+    /* alert( "You need to get a new gallon of milk in " + milkFridge * 16 / milk + " days" );
+    alert( "You need to get a new carton of eggs in " + eggsFridge / eggs + " days" );*/
 } );
+
+/* https://www.allrecipes.com/recipe/220520/classic-hash-browns/*/
+
 /* var minder = function( milk,eggs ){
     var gallon = 16;
     var carton = 12;
