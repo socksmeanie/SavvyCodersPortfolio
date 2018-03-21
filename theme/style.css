@@ -135,6 +135,7 @@ html {
   color: gray;
 }
 
+
 .navbar li:hover{
   background: gray;
 }
@@ -179,27 +180,26 @@ li.dropparent:hover .dropdown {
 #countdown>li {
   list-style-type: none;
   padding: 5px;
+    background: blue;
 }
 
-#countdown>li:first-child {
+/*#countdown>li:first-child {
   background: red;
-}
+}*/
 
-#countdown>li:nth-child(2) {
-  background: orange;
-}
 
-#countdown>li:nth-child(2n+1) {
+#countdown>li:nth-child(4n-2) {
   background: indigo;
 }
 
-#countdown>li:nth-child(2n) {
+#countdown>li:nth-child(4n-1) {
+  background: indigo;
+}
+
+#countdown>li:nth-child(4n) {
   background: blue;
 }
 
-#countdown>li:last-child {
-  background: violet;
-}
 
 #countdown>li:hover {
   background: black;
