@@ -9,6 +9,7 @@ function clear_page(){
 // $(story.start.choices)
 // $(story.start.choices).length
 
+
 var story = {
     "start": {
         "text": "The year is 1973. You're a hard-boiled PI with a wise-cracking partner, Burt. One day, you remember you haven't had a client in days. Or, actually, ever. Maybe you could go out and look for trouble? Then again, maybe Burt's got something to say.",

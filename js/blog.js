@@ -5,13 +5,17 @@ var $content = $( "#content" );
 
 postsRequest.then(
     ( posts ) => posts
+
+        .slice(
+            0,10
+        )
+        
         .map(
             ( post ) => "<h2>" + post.title + "</h2>" + "<p>" + post.body + "</p>"
-            /* ( post ) => "<p>" + post.body + "</p>"*/
         )
         .forEach(
             ( title ) => $content.append( title )
-            /* ( body ) => $content.append( body )*/
+
         )
 )
     .catch(
