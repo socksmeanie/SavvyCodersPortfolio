@@ -9,9 +9,9 @@ postsRequest.then(
         .slice(
             0,10
         )
-        
+
         .map(
-            ( post ) => "<h2>" + post.title + "</h2>" + "<p>" + post.body + "</p>"
+            ( post ) => "<div class='blogEntry'> <h2>" + post.title + "</h2>" + "<p>" + post.body + "</p><br> </div> <hr>"
         )
         .forEach(
             ( title ) => $content.append( title )
